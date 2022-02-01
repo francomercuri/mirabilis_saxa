@@ -1,6 +1,8 @@
 
-import './NavBar.css';
-import Logo from './logo_C.png';
+import './NavBar.css'
+import Logo from './logo_C.png'
+import CartWidget from './CartWidget'
+
 
 export default function NavBar (){
     return (
@@ -13,8 +15,9 @@ export default function NavBar (){
             <ul>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
-                <li><i className="fas fa-shopping-cart"><span>0</span></i></li>
+                <li> <CartWidget /></li>
             </ul>
+           
         </nav>
     </header>
     )
