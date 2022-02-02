@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer greeting="Lista de Items"/>
+      <ItemListContainer greeting="Lista de Items" SegundaProp="Se completará próximamente"/>
     </div>
   );
 }

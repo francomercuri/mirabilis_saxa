@@ -2,10 +2,11 @@
 import './ItemListContainer.css'
 
 
-export default function ItemListContainer(){
+export default function ItemListContainer({greeting, SegundaProp}){
     return(
-        <p>
-            Un texto
-        </p>
-    )
+        <div>
+            <h3>{greeting}</h3>
+        <p>{SegundaProp}</p>  </div>
+            
+    );
 }
