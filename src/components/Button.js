@@ -1,8 +1,9 @@
 import React from 'react'
 
-export default function Button({func, text, numA, numB}) {
+
+export default function Button({onAdd}) {
 	return (
-		<button onClick={() => func(numA, numB)}>
+		<button onClick={onAdd}>
 			Agregar al carrito
 		</button>
 	)
