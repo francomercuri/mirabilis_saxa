@@ -3,10 +3,10 @@ import './CartWidget.css';
 
 
 
-export default function CartWidget (){
+export default function CartWidget ({quantity}){
     return (
         <div>
-        <i className="fas fa-shopping-cart"><span>0</span></i>
+        <i className="fas fa-shopping-cart"><span>{quantity}</span></i>
         </div>
     )
 }

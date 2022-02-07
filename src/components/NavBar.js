@@ -1,10 +1,13 @@
+import react, {useStatea} from 'react';
 
-import './NavBar.css'
-import Logo from './logo_C.png'
-import CartWidget from './CartWidget'
+
+import './NavBar.css';
+import Logo from './logo_C.png';
+import CartWidget from './CartWidget';
 
 
 export default function NavBar (){
+
     return (
         <header className="navBar">
         <a className="logo" href="#">
@@ -15,7 +18,7 @@ export default function NavBar (){
             <ul>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
-                <li> <CartWidget /></li>
+                <li> <CartWidget quantity={0}/></li>
             </ul>
            
         </nav>
