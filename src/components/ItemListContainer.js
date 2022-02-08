@@ -5,6 +5,7 @@ import './ItemListContainer.css';
 
 import {getProducts} from './api/api';
 import ItemList from './ItemList';
+import Loading from './Loading';
 
 
 
@@ -21,7 +22,7 @@ export default function ItemListContainer({greeting}){
 
     return(
             <div className='itemListContainer'>
-                {products.length >0 ? <ItemList products={products} /> : <p className='loading'>Cargando...</p>}
+                {products.length >0 ? <ItemList products={products} /> : <Loading /> }
                 
             </div>
         );
