@@ -9,7 +9,7 @@ import ItemList from './ItemList';
 
 
 
-export default function ItemListContainer({greeting, initial, onAdd}){
+export default function ItemListContainer({greeting}){
     
     const [ products, setProducts ] = useState([]);
 
@@ -20,9 +20,8 @@ export default function ItemListContainer({greeting, initial, onAdd}){
     },[]);
 
     return(
-            <div>
-                <h3>{greeting}</h3>
-                {products.length >0 ? <ItemList products={products} /> : <p>Cargando...</p>}
+            <div className='itemListContainer'>
+                {products.length >0 ? <ItemList products={products} /> : <p className='loading'>Cargando...</p>}
                 
             </div>
         );
