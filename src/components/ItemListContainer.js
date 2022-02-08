@@ -1,21 +1,29 @@
 
-import react, {useState} from 'react';
+import react, {useState, useEffect} from 'react';
 
 import './ItemListContainer.css';
-import Button from './Button'
-import Counter from './counter.js'
 
+import {getProducts} from './api/api';
+import ItemList from './ItemList';
 
 
 
 
 export default function ItemListContainer({greeting, initial, onAdd}){
     
+    const [ products, setProducts ] = useState([]);
+
+    useEffect( () => {
+            getProducts().then(function(products){
+                setProducts( products );
+            })
+    },[]);
+
     return(
             <div>
                 <h3>{greeting}</h3>
-                <Counter  initial={0} stock={12} />
-                <Button />
+                {products.length >0 ? <ItemList products={products} /> : <p>Cargando...</p>}
+                
             </div>
         );
     }

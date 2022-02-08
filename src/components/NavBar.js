@@ -1,4 +1,3 @@
-import react, {useStatea} from 'react';
 
 
 import './NavBar.css';
