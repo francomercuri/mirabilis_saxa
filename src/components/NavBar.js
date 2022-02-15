@@ -3,6 +3,7 @@
 import './NavBar.css';
 import Logo from './logo_C.png';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 
 
 export default function NavBar (){

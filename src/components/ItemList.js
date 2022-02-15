@@ -1,7 +1,7 @@
 import './ItemList.css';
+import Item from './Item';
+import Counter from './counter';
 import Button from './Button';
-import Counter from './counter.js';
-import Item from './Item'
 
 export default function ItemList({products}){
     return(

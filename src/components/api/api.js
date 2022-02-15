@@ -4,25 +4,41 @@ const products = [
         id: 1,
         title: 'Opalo de fuego',
         price: 6000,
-        pictureUrl: './images/opalo_de_fuego.png'
+        pictureUrl: './images/opalo_de_fuego.png',
+        detail: '',
+        category: 'piedras'
     },
     {
         id: 2,
         title: 'Amatista',
         price: 6000,
-        pictureUrl: './images/amatista.png'
+        pictureUrl: './images/amatista.png',
+        detail: '',
+        category: 'piedras'
     },
     {
         id: 3,
         title: 'Jade',
-        price: 6000,
-        pictureUrl: './images/jade.png'
+        price: 10000,
+        pictureUrl: './images/jade.png',
+        detail: '',
+        category: 'piedras'
     },
     {
         id: 4,
         title: 'Nacar',
-        price: 6000,
-        pictureUrl: './images/nacar.png'
+        price: 8000,
+        pictureUrl: './images/nacar.png',
+        detail: '',
+        category: 'piedras'
+    },
+    {
+        id: 5,
+        title: 'Buda',
+        price: 2500,
+        pictureUrl: './images/buda.png',
+        detail: '',
+        category: 'decoracion'
     }
 
 ]
