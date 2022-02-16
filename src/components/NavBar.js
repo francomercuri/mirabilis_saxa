@@ -10,14 +10,15 @@ export default function NavBar (){
 
     return (
         <header className="navBar">
-        <a className="logo" href="#">
+        <Link className="logo" to={'/'}>
             <img src={Logo} alt="Logo Mirabilis Saxa" />
-        </a>
+        </Link>
         <p className="marca">Mirabilis Saxa</p>
         <nav className="botoneraHeader">
             <ul>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li> <Link to={'/'}>Productos</Link></li>
+                <li> <Link to={'/category/piedras'}> piedras </Link> </li>
+                <li> <Link to={'/category/decoracion'}> Decoracion </Link> </li>
                 <li> <CartWidget quantity={0}/></li>
             </ul>
            

@@ -2,23 +2,28 @@
 import './ItemDetail.css';
 import Button from './Button';
 import Counter from './counter.js';
-import Item from './Item'
+import Item from './Item';
 
 
 
-export default function ItemDetail({products}){
+export default function ItemDetail({detailedProduct}){
     return(
         <div>
             {
-            products.map( function (product) {
-                return (
-                    <div className='itemList' key={product.id}>
-                        <Item item={product} />
-                        <Counter initial={0} stock={12} />
-                        <Button />
+            detailedProduct.map(
+                function(items){
+                    return(
+                        <div className='item-detail' key={Item.id}>
+                            <img className="itemPicture" src={Item.pictureUrl} alt={`imagen de ${Item.title}`}/>
+                            <p className="itemName">{Item.title}</p>
+                            <p className="itemPrice">${Item.price}</p>
+                            <Counter />
+                            <Button />
                     </div>
-                );
-            })}
+                    )
+                }
+            )
+            }
         </div>
     )
 }

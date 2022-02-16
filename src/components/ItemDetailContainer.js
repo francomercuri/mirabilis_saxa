@@ -14,15 +14,16 @@ export default function ItemDetailContainer (){
     const { itemID } = useParams();
     
         useEffect(()=>{
-            getProducts.then((items)=>{
-                const item = items.find((i)=>i.id === Number(itemID));
-                setItems( item );
+            getProducts().then(function(products){
+                itemID ? setItems(products.filter(selectedItem => selectedItem.id === itemID))
+                : setItems(products)
             })
         },[itemID]);
 
     return(
+
         <div className='item-detail-container'>
-        {items.length >0 ? <ItemDetail products={items} /> : <Loading /> }
+        <ItemDetail detailedProduct={items} />
         </div>
     )
     }
