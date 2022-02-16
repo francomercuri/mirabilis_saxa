@@ -13,17 +13,22 @@ export default function ItemDetailContainer (){
     const [ items, setItems ] = useState([]); 
     const { itemID } = useParams();
     
-        useEffect(()=>{
-            getProducts().then(function(products){
-                itemID ? setItems(products.filter(selectedItem => selectedItem.id === itemID))
-                : setItems(products)
-            })
-        },[itemID]);
-
-    return(
-
-        <div className='item-detail-container'>
-        <ItemDetail detailedProduct={items} />
+    useEffect(() => {
+        getProducts().then(function (products) {
+          itemID
+            ? setItems(
+                products.find(
+                  (selectedItem) => selectedItem.id === parseInt(itemID)
+                )
+              )
+            : setItems(products);
+        });
+        console.log(items);
+      }, [itemID]);
+    
+      return (
+        <div className="item-detail-container">
+          <ItemDetail detailedProduct={items} /> 
         </div>
-    )
+      );
     }

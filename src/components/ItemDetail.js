@@ -6,24 +6,20 @@ import Item from './Item';
 
 
 
-export default function ItemDetail({detailedProduct}){
-    return(
-        <div>
-            {
-            detailedProduct.map(
-                function(items){
-                    return(
-                        <div className='item-detail' key={Item.id}>
-                            <img className="itemPicture" src={Item.pictureUrl} alt={`imagen de ${Item.title}`}/>
-                            <p className="itemName">{Item.title}</p>
-                            <p className="itemPrice">${Item.price}</p>
-                            <Counter />
-                            <Button />
-                    </div>
-                    )
-                }
-            )
-            }
+export default function ItemDetail({ detailedProduct }) {
+    return (
+      <div>
+        <div className="item-detail" key={detailedProduct.id}>
+          <img
+            className="itemPicture"
+            src={`./.${detailedProduct.pictureUrl}`}
+            alt={`imagen de ${detailedProduct.title}`}
+          />
+          <p className="itemName">{detailedProduct.title}</p>
+          <p className="itemPrice">{detailedProduct.price}</p>
+          <Counter initial={0} stock={12}/>
+          <Button />
         </div>
-    )
-}
+      </div>
+    );
+  }
