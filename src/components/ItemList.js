@@ -15,7 +15,7 @@ export default function ItemList({products}){
                 return (
                     <div className='itemList' key={product.id}>
                         <Item item={product} />
-                        <Counter initial={0} stock={12} />
+                        <Counter initial={0} stock={product.stock} />
                     </div>
                 );
             })}

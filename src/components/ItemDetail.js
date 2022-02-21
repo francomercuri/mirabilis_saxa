@@ -29,7 +29,7 @@ export default function ItemDetail({ detailedProduct }) {
           {//condicion para mostrar botón
           buyButton 
           ? ( <Link to='/cart'> Ver carrito </Link> )
-          : ( <Counter stock={ Item.stock } initial = {0} onAdd={onAdd} />)
+          : ( <Counter stock={ detailedProduct.stock } initial = {0} onAdd={onAdd} />)
           }
         </div>
       </div>
