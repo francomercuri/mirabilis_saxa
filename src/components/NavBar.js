@@ -3,7 +3,7 @@
 import './NavBar.css';
 import Logo from './logo_C.png';
 import CartWidget from './CartWidget';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 export default function NavBar (){
@@ -16,9 +16,9 @@ export default function NavBar (){
         <p className="marca">Mirabilis Saxa</p>
         <nav className="botoneraHeader">
             <ul>
-                <li> <Link to={'/'}>Productos</Link></li>
-                <li> <Link to={'/category/piedras'}> piedras </Link> </li>
-                <li> <Link to={'/category/decoracion'}> Decoracion </Link> </li>
+                <li> <NavLink to={'/'}>Productos</NavLink></li>
+                <li> <NavLink to={'/category/piedras'}> piedras </NavLink> </li>
+                <li> <NavLink to={'/category/decoracion'}> Decoracion </NavLink> </li>
                 <li> <CartWidget quantity={0}/></li>
             </ul>
            

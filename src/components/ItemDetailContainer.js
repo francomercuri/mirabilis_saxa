@@ -5,6 +5,7 @@ import './ItemDetailContainer.css';
 import ItemDetail from './ItemDetail';
 import Loading from './Loading';
 import { useParams } from 'react-router-dom';
+import Item from './Item';
 
 
 
@@ -23,12 +24,12 @@ export default function ItemDetailContainer (){
               )
             : setItems(products);
         });
-        console.log(items);
       }, [itemID]);
     
       return (
         <div className="item-detail-container">
-          <ItemDetail detailedProduct={items} /> 
+       <ItemDetail detailedProduct={items} />
+     
         </div>
       );
     }

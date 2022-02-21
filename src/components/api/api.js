@@ -6,6 +6,7 @@ const products = [
         price: 6000,
         pictureUrl: './images/opalo_de_fuego.png',
         detail: '',
+        stock: 15,
         category: 'piedras'
     },
     {
@@ -14,6 +15,7 @@ const products = [
         price: 6000,
         pictureUrl: './images/amatista.png',
         detail: '',
+        stock: 15,
         category: 'piedras'
     },
     {
@@ -22,6 +24,7 @@ const products = [
         price: 10000,
         pictureUrl: './images/jade.png',
         detail: '',
+        stock: 10,
         category: 'piedras'
     },
     {
@@ -30,6 +33,7 @@ const products = [
         price: 8000,
         pictureUrl: './images/nacar.png',
         detail: '',
+        stock: 8,
         category: 'piedras'
     },
     {
@@ -38,6 +42,7 @@ const products = [
         price: 2500,
         pictureUrl: './images/buda.png',
         detail: '',
+        stock: 6,
         category: 'decoracion'
     }
 

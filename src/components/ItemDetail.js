@@ -1,12 +1,21 @@
 
 import './ItemDetail.css';
-import Button from './Button';
 import Counter from './counter.js';
 import Item from './Item';
+import { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 
 
 export default function ItemDetail({ detailedProduct }) {
+
+  const [buyButton, setBuyButton] = useState (false);
+
+  function onAdd (quantity){
+    console.log(quantity);
+    setBuyButton(true);
+  }
+
     return (
       <div>
         <div className="item-detail" key={detailedProduct.id}>
@@ -15,11 +24,14 @@ export default function ItemDetail({ detailedProduct }) {
             src={`./.${detailedProduct.pictureUrl}`}
             alt={`imagen de ${detailedProduct.title}`}
           />
-          <p className="itemName">{detailedProduct.title}</p>
-          <p className="itemPrice">{detailedProduct.price}</p>
-          <Counter initial={0} stock={12}/>
-          <Button />
+          <h3 className="itemName">{detailedProduct.title}</h3>
+          <h4 className="itemPrice">{detailedProduct.price}</h4>
+          {//condicion para mostrar botón
+          buyButton 
+          ? ( <Link to='/cart'> Ver carrito </Link> )
+          : ( <Counter stock={ Item.stock } initial = {0} onAdd={onAdd} />)
+          }
         </div>
       </div>
     );
-  }
+  };
