@@ -2,7 +2,8 @@
 import './ItemDetail.css';
 import Counter from './counter.js';
 import Item from './Item';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom'
 
 
@@ -11,10 +12,12 @@ export default function ItemDetail({ detailedProduct }) {
 
   const [buyButton, setBuyButton] = useState (false);
 
+  const { addToCart } = useContext(CartContext);
+
   function onAdd (quantity){
-    console.log(quantity);
     setBuyButton(true);
-  }
+    addToCart(detailedProduct, quantity);
+  };
 
     return (
       <div>

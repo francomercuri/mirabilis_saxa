@@ -19,7 +19,7 @@ export default function NavBar (){
                 <li> <NavLink to={'/'}>Productos</NavLink></li>
                 <li> <NavLink to={'/category/piedras'}> piedras </NavLink> </li>
                 <li> <NavLink to={'/category/decoracion'}> Decoracion </NavLink> </li>
-                <li> <CartWidget quantity={0}/></li>
+                <li> <NavLink to={'/cart'}><CartWidget quantity={0}/></NavLink></li>
             </ul>
            
         </nav>
